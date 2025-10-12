@@ -53,7 +53,7 @@ frontend/
 4. Start the backend server:
 
    ```sh
-   npm start
+   npm run dev
    ```
 
 ## Frontend
@@ -92,7 +92,7 @@ frontend/
 
 - **Backend**
 
-  - `npm start` – Start the backend server
+  - `npm run dev` – Start the backend server
   - `npx prisma migrate dev` – Run database migrations
 
 - **Frontend**
