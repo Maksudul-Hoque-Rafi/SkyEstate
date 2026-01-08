@@ -9,6 +9,7 @@ import dotenv from "dotenv";
 dotenv.config();
 
 const app = express();
+const PORT = process.env.PORT || 3000;
 app.use(cors({ origin: process.env.CLIENT_URL, credentials: true }));
 app.use(cookieParser());
 app.use(express.json());
@@ -18,6 +19,6 @@ app.use("/api/users", userRouter);
 app.use("/api/posts", postRouter);
 app.use("/api/test", testRouter);
 
-app.listen(3000, () => {
-  console.log("Server Started at port 3000");
+app.listen(PORT, () => {
+  console.log(`Server started at port ${PORT}`);
 });
